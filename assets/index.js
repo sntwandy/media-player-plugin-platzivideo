@@ -1,22 +1,10 @@
+import MediaPlayer from './MediaPlayer.js';
+
 const video = document.querySelector("video");
-        const button = document.querySelector("button");
+const button = document.querySelector("button");
 
-        class MediaPlayer {
-            constructor(config) {
-                this.media = config;
-            }
+const media = new MediaPlayer(video);
 
-            play(){
-                this.media.play();
-            }
-
-            pause(){
-                this.media.pause();
-            }
-        }
-
-        const media = new MediaPlayer(video);
-
-        button.onclick = () => {
-            (video.paused) ? media.play() : media.pause();
-        }
+button.onclick = () => {
+    (video.paused) ? media.play() : media.pause();
+}
