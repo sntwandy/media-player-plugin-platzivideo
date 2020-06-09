@@ -10,8 +10,12 @@ const media = new MediaPlayer({ el: video  ,plugins: [new AutoPlay(), new AutoPa
 
 play_pause_btn.onclick = () => {
     (video.paused) ? media.play() : media.pause();
-}
+};
 
 mute_unmute_btn.onclick = () => {
     (video.muted) ? media.unmute() : media.mute();
-}
+};
+
+if('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js').catch(error => console.log(error.message));
+};
