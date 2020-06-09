@@ -68,3 +68,21 @@ function fullName(firstName: string, lastName: string = 'Bartolome'): string {
 
 const darcy = fullName('Darcy');
 console.log(darcy);
+
+// Interfaces
+interface Reactangule {
+    width: number,
+    height: number,
+};
+
+let rect: Reactangule = {
+    width: 10,
+    height: 13,
+};
+
+function area(r: Reactangule): number {
+    return r.width * r.height;
+};
+
+const areaRect = area(rect);
+console.log(areaRect);
