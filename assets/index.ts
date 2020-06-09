@@ -1,10 +1,10 @@
-import MediaPlayer from './MediaPlayer.js';
-import AutoPlay from './plugins/AutoPlay.js';
-import AutoPause from './plugins/AutoPause.js';
+import MediaPlayer from './MediaPlayer';
+import AutoPlay from './plugins/AutoPlay';
+import AutoPause from './plugins/AutoPause';
 
 const video = document.querySelector("video");
-const play_pause_btn = document.getElementById("play-pause-btn");
-const mute_unmute_btn = document.getElementById("mute-unmute-btn");
+const play_pause_btn: HTMLElement = document.getElementById("play-pause-btn");
+const mute_unmute_btn: HTMLElement = document.getElementById("mute-unmute-btn");
 
 const media = new MediaPlayer({ el: video  ,plugins: [new AutoPlay(), new AutoPause()]});
 
